@@ -64,7 +64,14 @@ namespace MyContacts.Model
 
             await Database.DeleteAsync(contact);
         }
+
+        public async Task UpdateContactAsync(ContactInfo contact)
+        {
+            await Init();
+            await Database.UpdateAsync(contact);
+        }
+
     }
 
 
- }
+}
